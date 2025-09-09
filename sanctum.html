@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Koyo Sanctum — Member</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/sanctum.css">
+</head>
+
+<body>
+  <header class="site-header small">
+    <div class="container header-inner">
+      <img src="assets/logo.svg" alt="Koyo" class="brand-logo small">
+      <div class="member-actions">
+        <span id="sessionInfo" class="session-info"></span>
+        <button id="copyLink" class="btn-ghost">Copy Member Link</button>
+        <button id="logoutBtn" class="btn-ghost">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="sanctum-hero">
+      <div class="container sanctum-hero-inner">
+        <div class="welcome">
+          <h1 id="welcomeMessage">Welcome to the Sanctum</h1>
+          <p class="sub">Private access to your rituals and rewards.</p>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-heading">Your Points</div>
+          <div id="pointsDisplay" class="points-value">—</div>
+          <div class="small">Use points for samples, discounts and ritual packs.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container sanctum-body">
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Redeem a scratch code</h3>
+          <div class="redeem-row">
+            <input id="redeemCode" placeholder="Enter scratch code from packaging">
+            <button id="redeemBtn" class="btn-primary">Redeem</button>
+          </div>
+          <div id="redeemMessage" class="form-message"></div>
+
+          <h4 class="activity-title">Recent activity</h4>
+          <ul id="activity" class="activity-list"></ul>
+          <div class="keyboard-hint">💡 Tip: Press Ctrl+K to focus redeem input, Enter to redeem, Esc to clear</div>
+        </div>
+
+        <aside class="panel">
+          <h3>This month’s ritual</h3>
+          <div class="perk-large">
+            <h4>Free Shipping + Mini Dew Serum</h4>
+            <p>Enjoy complimentary shipping and a sample Dew Serum with selected orders this month.</p>
+            <a class="btn-outline" href="https://koyobeauty.com" target="_blank" rel="noopener">Shop Koyo</a>
+          </div>
+
+          <h3 style="margin-top:22px">Sanctum Library</h3>
+          <div class="library-list">
+            <a class="lib-item" href="#" onclick="alert('Download placeholder: Skin Ritual Journal')">📝 Skin Ritual
+              Journal (PDF)</a>
+            <a class="lib-item" href="#" onclick="alert('Play placeholder: Morning Ritual Audio')">🔊 Morning Ritual
+              Audio</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 Koyo Beauty — Koyo Sanctum</div>
+  </footer>
+
+  <!-- Supabase UMD -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+  <!-- Config -->
+  <script src="js/config.js"></script>
+
+  <!-- Sanctum logic -->
+  <script src="js/sanctum.js"></script>
+</body>
+
+</html>

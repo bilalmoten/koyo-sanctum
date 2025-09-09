@@ -1,0 +1,151 @@
+/* css/landing.css - hero and landing specific */
+.hero {
+  padding: 48px 0 26px;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 20, 36, 0.02),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 28px;
+  align-items: center;
+}
+.hero-left {
+  padding: 28px;
+}
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  margin: 0;
+  color: var(--deep-1);
+}
+.hero-sub {
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 520px;
+}
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 22px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.hero-cta {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+}
+
+/* entry card (login) */
+.hero-card {
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.7)
+  );
+  box-shadow: 0 18px 48px rgba(6, 20, 36, 0.06);
+}
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: var(--mid-1);
+}
+.card-sub {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+.card-form {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.card-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(11, 31, 54, 0.06);
+  margin: 10px 0;
+  background: white;
+  font-size: 1rem;
+}
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Form options */
+.form-options {
+  margin: 12px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(11, 31, 54, 0.2);
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background: var(--mid-1);
+  border-color: var(--mid-1);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* how + perks */
+.how {
+  padding: 40px 0;
+}
+.how-list {
+  color: var(--muted);
+  padding-left: 18px;
+}
+.perks {
+  padding: 40px 0;
+}
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+.perk {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), #fff);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(12, 28, 50, 0.04);
+}
+.perk-icon {
+  font-size: 22px;
+}

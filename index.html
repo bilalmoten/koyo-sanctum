@@ -1,49 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Koyo Sanctum</title>
-    <link rel="stylesheet" href="sanctum.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Koyo Sanctum — Enter</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <img src="assets/logo.png" alt="Koyo Beauty" class="logo">
-            <h1>Koyo Sanctum</h1>
-            <p class="subtitle">Your monthly ritual, rewards, and perks</p>
-        </header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <img src="assets/logo.svg" alt="Koyo" class="brand-logo">
+            <nav class="nav">
+                <a href="#" class="nav-link">Sanctum</a>
+                <a href="#" class="nav-link">Rituals</a>
+                <a href="#" class="nav-link">Support</a>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Login Section -->
-        <section id="login">
-            <h2>Enter Sanctum</h2>
-            <input type="text" id="member_id" placeholder="Member ID">
-            <input type="password" id="gift_code" placeholder="Gift Code">
-            <button onclick="login()">Login</button>
+    <main>
+        <section class="hero">
+            <div class="hero-grid container">
+                <div class="hero-left">
+                    <h1 class="hero-title">Koyo Sanctum</h1>
+                    <p class="hero-sub">A private sanctum for ritual-led skincare — where slow craft meets small
+                        rewards.</p>
+
+                    <ul class="hero-benefits">
+                        <li><strong>Monthly ritual gifts</strong> — curated samples & drops</li>
+                        <li><strong>Interactive scratch codes</strong> — redeem from packaging</li>
+                        <li><strong>Meaningful rewards</strong> — samples, discounts, and ritual extras</li>
+                    </ul>
+
+                    <div class="hero-cta">
+                        <a class="btn-outline" href="#how">How it works</a>
+                        <a class="btn-primary" href="#entry">Enter your Sanctum</a>
+                    </div>
+                </div>
+
+                <aside class="hero-card" id="entry">
+                    <div class="card-top">
+                        <div>
+                            <div class="card-title">Enter the Sanctum</div>
+                            <div class="card-sub">Member ID + Access Code from your Sanctum card</div>
+                        </div>
+                    </div>
+
+                    <form id="loginForm" class="card-form" novalidate>
+                        <input id="memberId" name="memberId" type="text" placeholder="Member ID — e.g. KOYO-001"
+                            autocomplete="off" required />
+                        <input id="accessCode" name="accessCode" type="password"
+                            placeholder="Access code (on your card)" required />
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe" />
+                                <span class="checkmark"></span>
+                                Remember me for 7 days
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary block">Enter Sanctum</button>
+                        <div class="hint">Lost your card? Contact support — we can help verify purchase.</div>
+                        <div id="errorMessage" class="form-error" aria-live="polite"></div>
+                    </form>
+                </aside>
+            </div>
         </section>
 
-        <!-- Dashboard Section -->
-        <section id="dashboard" style="display:none;">
-            <h2>Welcome, <span id="memberLabel"></span></h2>
-            <p><strong>Your Points:</strong> <span id="points">0</span></p>
+        <section id="how" class="how container">
+            <h2>How the Sanctum works</h2>
+            <ol class="how-list">
+                <li>Each product includes a <strong>Sanctum card</strong> with a Member ID and an Access Code.</li>
+                <li>Enter those details here to unlock your Sanctum account.</li>
+                <li>Scratch unique codes inside packaging, redeem them here to earn points.</li>
+                <li>Redeem points for monthly gifts, samples, and exclusive ritual content.</li>
+            </ol>
+        </section>
 
-            <div class="redeem-box">
-                <input type="text" id="redeem_code" placeholder="Enter Scratch Code">
-                <button onclick="redeem()">Redeem</button>
-            </div>
-            <p id="redeemMessage" class="message"></p>
-
-            <div class="perks">
-                <h3>This Month’s Sanctum Gift</h3>
-                <p>✨ Free Shipping on all orders this month</p>
+        <section class="perks container">
+            <h2>This month’s ritual</h2>
+            <div class="perks-grid">
+                <div class="perk">
+                    <div class="perk-icon">🎁</div>
+                    <h3>Free Shipping + Mini Dew Serum</h3>
+                    <p>Selected orders this month include our travel-size Dew Serum — an introductory ritual drop.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk-icon">✨</div>
+                    <h3>Points for scratch codes</h3>
+                    <p>Every scratch code redeemed adds points you can redeem for samples and discounts.</p>
+                </div>
+                <div class="perk">
+                    <div class="perk-icon">📖</div>
+                    <h3>Sanctum Library</h3>
+                    <p>Members unlock audio rituals and journaling templates — for mindful skincare.</p>
+                </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- Supabase + App -->
-    <script src="https://unpkg.com/@supabase/supabase-js"></script>
-    <script src="sanctum.js"></script>
+    <footer class="site-footer">
+        <div class="container">© 2025 Koyo Beauty — Koyo Sanctum</div>
+    </footer>
+
+    <!-- Supabase UMD -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+    <!-- Config (fill your keys) -->
+    <script src="js/config.js"></script>
+
+    <!-- Auth logic -->
+    <script src="js/auth.js"></script>
 </body>
 
 </html>

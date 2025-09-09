@@ -1,0 +1,13 @@
+<!-- assets/logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Koyo logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#9fb7d9"/>
+      <stop offset="1" stop-color="#3a6aa6"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="transparent"/>
+  <circle cx="100" cy="80" r="62" fill="url(#g)" opacity="0.95"/>
+  <path d="M62 114c20-28 52-46 74-44" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <path d="M72 94c12-12 28-18 44-17" stroke="#fff" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+</svg>

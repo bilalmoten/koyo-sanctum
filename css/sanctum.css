@@ -1,0 +1,116 @@
+/* css/sanctum.css - member area styling */
+.sanctum-hero {
+  padding: 36px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 32, 60, 0.02),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+.sanctum-hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.welcome h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: 0;
+}
+.sub {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* summary card */
+.summary-card {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(10, 30, 60, 0.05);
+  text-align: center;
+}
+.summary-heading {
+  color: var(--muted);
+  font-weight: 600;
+}
+.points-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--mid-1);
+  margin-top: 6px;
+}
+
+/* body layout */
+.sanctum-body {
+  padding: 40px 0;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 28px;
+}
+.panel {
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(12, 30, 50, 0.04);
+}
+.redeem-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.redeem-row input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(11, 31, 54, 0.06);
+}
+.activity-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.keyboard-hint {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* library links */
+.lib-item {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(11, 31, 54, 0.05);
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--mid-1);
+}
+
+/* Session info */
+.session-info {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-right: 12px;
+  padding: 4px 8px;
+  background: rgba(11, 31, 54, 0.05);
+  border-radius: 6px;
+}
+
+.member-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.perk-large {
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfdff, #fff);
+  border: 1px solid rgba(11, 31, 54, 0.03);
+}
