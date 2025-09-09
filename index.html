@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Koyo Sanctum</title>
+    <link rel="stylesheet" href="sanctum.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="assets/logo.png" alt="Koyo Beauty" class="logo">
+            <h1>Koyo Sanctum</h1>
+            <p class="subtitle">Your monthly ritual, rewards, and perks</p>
+        </header>
+
+        <!-- Login Section -->
+        <section id="login">
+            <h2>Enter Sanctum</h2>
+            <input type="text" id="member_id" placeholder="Member ID">
+            <input type="password" id="gift_code" placeholder="Gift Code">
+            <button onclick="login()">Login</button>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" style="display:none;">
+            <h2>Welcome, <span id="memberLabel"></span></h2>
+            <p><strong>Your Points:</strong> <span id="points">0</span></p>
+
+            <div class="redeem-box">
+                <input type="text" id="redeem_code" placeholder="Enter Scratch Code">
+                <button onclick="redeem()">Redeem</button>
+            </div>
+            <p id="redeemMessage" class="message"></p>
+
+            <div class="perks">
+                <h3>This Month’s Sanctum Gift</h3>
+                <p>✨ Free Shipping on all orders this month</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Supabase + App -->
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script src="sanctum.js"></script>
+</body>
+
+</html>
